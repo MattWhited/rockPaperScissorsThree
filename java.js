@@ -12,12 +12,14 @@ function getComputerChoice() {
     };
 }
 
-
-//I need a human input for the game now. 
-// I can do that using the prompt method. 
-
 function getHumanChoice() {
     let answer = prompt("Rock, Paper or Scissors?"); {
         return answer;
     }
 }
+
+// I need a way to keep track of players scores. 
+
+// declare two variables
+// start this variables at 0
+// when a team wins the game, add a point to its respective variable. 
