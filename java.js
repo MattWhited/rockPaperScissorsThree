@@ -15,3 +15,9 @@ function getComputerChoice() {
 
 //I need a human input for the game now. 
 // I can do that using the prompt method. 
+
+function getHumanChoice() {
+    let answer = prompt("Rock, Paper or Scissors?"); {
+        return answer;
+    }
+}
