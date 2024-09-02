@@ -23,3 +23,7 @@ function getHumanChoice() {
 // declare two variables
 // start this variables at 0
 // when a team wins the game, add a point to its respective variable. 
+
+let humanScore = 0;
+
+let computerScore = 0; 
