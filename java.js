@@ -4,11 +4,11 @@ console.log('RPS')
 function getComputerChoice() {
     let Num = Math.floor(Math.random()*3);
     if (Num === 0) {
-        console.log('rock');
+        return 'rock';
     } else if (Num === 1) {
-        console.log('paper');
+        return 'paper';
     } else if (Num === 2) {
-        console.log('scissors');
+        return 'scissors';
     };
 }
 
@@ -22,21 +22,22 @@ let humanScore = 0;
 
 let computerScore = 0; 
 
-function playRound(humanChoice, computerChoice) {
-    if (humanChoice === 'rock' && computerChoice === 'paper') {
-        return 'Computer chose paper, you lost.'
-    } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-        return 'Computer chose scissors, better luck next time.'
-    } else if (humanChoice === 'scissors' && computerChoice === 'rock'){
-        return 'Computer chose rock, way to lose again!'
-    } else if (humanChoice === 'rock' && computerChoice === 'rock') {
-        return 'It is a Draw! Play again!'
-    } else {
-        return 'You Win!'
-    }
-    // if the same element is chosen then it is a draw
-    //declare a winner based on those results. 
-}
-
 const humanChoice = getHumanChoice().toLowerCase();
 const computerChoice = getComputerChoice(); 
+
+function playRound() {
+    if (humanChoice === 'rock' && computerChoice === 'paper') {
+        return 'Computer chose paper, you lost.';
+    } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
+       return 'Computer chose scissors, better luck next time.';
+    } else if (humanChoice === 'scissors' && computerChoice === 'rock'){
+        return 'Computer chose rock, way to lose again!';
+    } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
+        return 'You Crushed Scissors! Good Job!';
+    } else if (humanChoice === 'paper' && computerChoice === 'rock') {
+        return 'You Covered Rock! Get it Son!'; 
+    } else if(humanChoice === 'scissors' && computerChoice === 'paper') {
+        return 'You cut up paper... now clean it up.';
+    } else if (humanChoice === computerChoice)
+        return 'It is a Draw! Play again!';
+}
