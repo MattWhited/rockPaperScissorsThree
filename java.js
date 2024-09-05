@@ -19,7 +19,6 @@ function getHumanChoice() {
 }
 
 let humanScore = 0;
-
 let computerScore = 0; 
 
 const humanChoice = getHumanChoice().toLowerCase();
@@ -41,3 +40,8 @@ function playRound() {
     } else if (humanChoice === computerChoice)
         return 'It is a Draw! Play again!';
 }
+
+// wether in 'playRound' or just outside of it i need to
+// declare a winner of the round
+// increment the score of the winner of the round by one
+//
