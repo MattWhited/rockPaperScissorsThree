@@ -1,5 +1,10 @@
 console.log('RPS')
 
+let humanScore = 0;
+let computerScore = 0; 
+
+let humanChoice = getHumanChoice().toLowerCase();
+let computerChoice = getComputerChoice(); 
 
 function getComputerChoice() {
     let Num = Math.floor(Math.random()*3);
@@ -13,16 +18,10 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let answer = prompt ("Rock, Paper or Scissors?"); {
-        return answer;
-    }
+   let answer = prompt ("Rock, Paper or Scissors?"); {
+   return answer;
+   }
 }
-
-let humanScore = 0;
-let computerScore = 0; 
-
-const humanChoice = getHumanChoice().toLowerCase();
-const computerChoice = getComputerChoice(); 
 
 function playRound() {
     if (humanChoice === 'rock' && computerChoice === 'paper') {
@@ -59,3 +58,29 @@ function addPoint() {
         return 'It is a Draw! Play again!';
 }
 
+
+function playGame() {
+    getComputerChoice()
+    getHumanChoice()
+    playRound()
+    addPoint()
+    if (computerScore > humanScore) {
+        return 'computer is ahead!';
+    } else if (computerScore < humanScore){
+        return 'You are ahead!'
+    }
+}
+
+
+// play 5 rounds
+// i need to.
+// get new choices from both players
+// play a round using those choices
+// keep score of the winning points
+
+// the issue I am running into is updating 
+// humanScore. I can update it once, but nothing after
+// that. 
+
+// I don't know what to do about that, so i will be
+// moving on. its close enough for now. 
