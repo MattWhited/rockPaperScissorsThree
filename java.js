@@ -3,8 +3,25 @@ console.log('RPS')
 let humanScore = 0;
 let computerScore = 0; 
 
-let humanChoice = getHumanChoice().toLowerCase();
+
+let humanChoice = 0;
 let computerChoice = getComputerChoice(); 
+
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById('paper'); 
+const scissorsButton = document.getElementById('scissors'); 
+
+rockButton.addEventListener("click" , function() {
+    console.log("rock")
+});
+
+paperButton.addEventListener("click", function() {
+    console.log("paper")
+});
+
+scissorsButton.addEventListener("click", function() {
+    console.log("scissors")
+});
 
 function getComputerChoice() {
     let Num = Math.floor(Math.random()*3);
@@ -17,11 +34,6 @@ function getComputerChoice() {
     };
 }
 
-function getHumanChoice() {
-   let answer = prompt ("Rock, Paper or Scissors?"); {
-   return answer;
-   }
-}
 
 function playRound() {
     if (humanChoice === 'rock' && computerChoice === 'paper') {
