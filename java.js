@@ -4,7 +4,7 @@ let humanScore = 0;
 let computerScore = 0; 
 
 
-let humanChoice = 0;
+
 let computerChoice = getComputerChoice(); 
 
 const rockButton = document.getElementById("rock");
@@ -12,15 +12,18 @@ const paperButton = document.getElementById('paper');
 const scissorsButton = document.getElementById('scissors'); 
 
 rockButton.addEventListener("click" , function() {
-    console.log("rock")
+    humanChoice = 'rock'
+    console.log(playRound())
 });
 
 paperButton.addEventListener("click", function() {
-    console.log("paper")
+    humanChoice = 'paper'
+    console.log(playRound())
 });
 
 scissorsButton.addEventListener("click", function() {
-    console.log("scissors")
+    humanChoice = 'scissors'
+    console.log(playRound())
 });
 
 function getComputerChoice() {
