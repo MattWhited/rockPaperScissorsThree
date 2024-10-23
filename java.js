@@ -13,17 +13,17 @@ const scissorsButton = document.getElementById('scissors');
 
 rockButton.addEventListener("click" , function() {
     humanChoice = 'rock'
-    console.log(playRound())
+    document.getElementById("result").innerHTML = playRound()
 });
 
 paperButton.addEventListener("click", function() {
     humanChoice = 'paper'
-    console.log(playRound())
+    document.getElementById("result").innerHTML = playRound()
 });
 
 scissorsButton.addEventListener("click", function() {
     humanChoice = 'scissors'
-    console.log(playRound())
+    document.getElementById("result").innerHTML = playRound()
 });
 
 function getComputerChoice() {
@@ -85,17 +85,3 @@ function playGame() {
         return 'You are ahead!'
     }
 }
-
-
-// play 5 rounds
-// i need to.
-// get new choices from both players
-// play a round using those choices
-// keep score of the winning points
-
-// the issue I am running into is updating 
-// humanScore. I can update it once, but nothing after
-// that. 
-
-// I don't know what to do about that, so i will be
-// moving on. its close enough for now. 
