@@ -3,25 +3,24 @@ console.log('RPS')
 let humanScore = 0;
 let computerScore = 0; 
 
-
-
-let computerChoice = getComputerChoice(); 
-
 const rockButton = document.getElementById("rock");
 const paperButton = document.getElementById('paper'); 
 const scissorsButton = document.getElementById('scissors'); 
 
 rockButton.addEventListener("click" , function() {
-    humanChoice = 'rock'
-    document.getElementById("result").innerHTML = playRound()
+    computerChoice = getComputerChoice(); 
+    humanChoice = 'rock';
+    document.getElementById("result").innerHTML = playRound();
 });
 
 paperButton.addEventListener("click", function() {
+    computerChoice = getComputerChoice(); 
     humanChoice = 'paper'
     document.getElementById("result").innerHTML = playRound()
 });
 
 scissorsButton.addEventListener("click", function() {
+    computerChoice = getComputerChoice(); 
     humanChoice = 'scissors'
     document.getElementById("result").innerHTML = playRound()
 });
@@ -46,11 +45,11 @@ function playRound() {
     } else if (humanChoice === 'scissors' && computerChoice === 'rock'){
         return 'Computer chose rock, way to lose again!';
     } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-        return 'You Crushed Scissors! Good Job!';
+        return 'Computer chose Scissors! Good Job!';
     } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-        return 'You Covered Rock! Get it Son!'; 
+        return 'Computer chose Rock! Get it Son!'; 
     } else if(humanChoice === 'scissors' && computerChoice === 'paper') {
-        return 'You cut up paper... now clean it up.';
+        return 'Computer chose paper! Way to go!';
     } else if (humanChoice === computerChoice)
         return 'It is a Draw! Play again!';
 }
