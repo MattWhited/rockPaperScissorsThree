@@ -10,20 +10,32 @@ const scissorsButton = document.getElementById('scissors');
 rockButton.addEventListener("click" , function() {
     computerChoice = getComputerChoice(); 
     humanChoice = 'rock';
+    addPoint();
     document.getElementById("result").innerHTML = playRound();
+    document.getElementById("humanScore").innerHTML = humanScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
 });
 
 paperButton.addEventListener("click", function() {
     computerChoice = getComputerChoice(); 
-    humanChoice = 'paper'
-    document.getElementById("result").innerHTML = playRound()
+    humanChoice = 'paper';
+    addPoint();
+    document.getElementById("result").innerHTML = playRound();
+    document.getElementById("humanScore").innerHTML = humanScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
 });
 
 scissorsButton.addEventListener("click", function() {
     computerChoice = getComputerChoice(); 
-    humanChoice = 'scissors'
-    document.getElementById("result").innerHTML = playRound()
+    humanChoice = 'scissors';
+    addPoint();
+    document.getElementById("result").innerHTML = playRound();
+    document.getElementById("humanScore").innerHTML = humanScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
 });
+
+const displayHumanScore = document.getElementById("humanScore");
+const displayComputerScore = document.getElementById("computerScore");
 
 function getComputerChoice() {
     let Num = Math.floor(Math.random()*3);
